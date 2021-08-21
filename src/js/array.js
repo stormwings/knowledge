@@ -347,3 +347,33 @@ function sumsDivisibleByK(a, k) {
 console.log(sumsDivisibleByK([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 5))
 
 const orderArrayDesc = (array) => array.sort((a, b) => a - b);
+
+function almostIncreasingSequence(sequence) {
+  if (1 === sequence.length || !(2 <= sequence.length) || sequence.length >= 100000) return false
+  
+  const MAX_SIZE = 100000
+
+  let result = false;
+  
+  const removeItemByIndex = (array, index) => {
+      const arrayStart = [...array.slice(0, index)];
+      const arrayEnd = [...array.slice(index + 1)];
+
+      return arrayStart.concat(arrayEnd);
+  }
+      
+  const isChairFormatIncreasing = (array) => {
+      const isLastItem = (array, i) => i + 1 === array.length
+      const reductor = (result, currentElement, index) => isLastItem(array, index) || currentElement < array[index + 1] ? result : false
+      
+      return array.reduce(reductor, true);
+  }
+      
+  sequence.map((x, index) => {
+      const checkNumberSize = (-MAX_SIZE <= x) && (x <= MAX_SIZE)
+      if (checkNumberSize, isChairFormatIncreasing((removeItemByIndex(sequence, index))))
+          result = true;
+  })
+
+  return result;
+}

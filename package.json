@@ -1,40 +1,17 @@
 {
-  "name": "webpack_workbench",
-  "version": "2.0.0",
-  "description": "workbench to layout component and webpages",
+  "name": "knowledge",
+  "version": "3.0.0",
+  "description": "knowledge",
   "scripts": {
-    "start": "webpack-dev-server --config ./webpack/webpack.config.dev.js",
-    "build": "npm-run-all clean prod",
-    "prod": "webpack --config ./webpack/webpack.config.prod.js",
-    "clean": "rm -R ./dist ||:"
+    "start": ""
   },
-  "author": "StormWings",
+  "author": "stormwings",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "7.5.4",
     "@babel/plugin-transform-runtime": "7.5.0",
     "@babel/preset-env": "7.5.4",
     "@babel/runtime": "7.5.4",
-    "babel-loader": "8.0.6",
-    "copy-webpack-plugin": "5.0.4",
-    "css-loader": "3.0.0",
-    "file-loader": "4.1.0",
-    "html-webpack-plugin": "3.2.0",
-    "mini-css-extract-plugin": "0.7.0",
-    "node-sass": "4.12.0",
-    "npm-run-all": "4.1.5",
-    "sass-loader": "7.1.0",
-    "style-loader": "0.23.1",
-    "uglifyjs-webpack-plugin": "2.2.0",
-    "url-loader": "2.1.0",
-    "webpack": "4.32.2",
-    "webpack-cli": "3.3.2",
-    "webpack-dev-server": "3.5.1"
-  },
-  "dependencies": {
-    "axios": "0.19.0",
-    "jquery": "^3.4.1",
-    "lottie-web": "^5.5.9",
-    "swiper": "^5.2.0"
+    "babel-loader": "8.0.6"
   }
 }
